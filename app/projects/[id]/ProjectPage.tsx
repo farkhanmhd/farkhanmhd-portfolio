@@ -69,7 +69,7 @@ const ProjectPage = ({ project, content }: Props) => {
         </article>
       </div>
       <div className='bg-secondary/50 py-6 lg:py-12'>
-        <div className='max-w-7xl px-6 mx-auto space-y-6'>
+        <div className='max-w-7xl px-3 md:px-6 mx-auto space-y-6'>
           <h2 className='text-3xl lg:text-4xl font-medium'>Other Projects</h2>
           <div className='flex flex-col md:flex-row gap-6 items-center'>
             <MapItems of={otherProjects} render={(other) => <ProjectCard key={other.id} {...other} />} />

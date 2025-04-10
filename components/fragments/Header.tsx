@@ -35,11 +35,11 @@ const Header: React.FC = () => {
   return (
     <header
       ref={headerRef}
-      className='py-5 -translate-y-[84px] fixed opacity-0 top-0 left-0 bg-background/75 backdrop-blur-md z-[999] w-screen pointer-events-auto px-3 md:px-6'
+      className='py-5 -translate-y-[84px] fixed opacity-0 top-0 left-0 bg-background/75 backdrop-blur-md z-[999] w-screen pointer-events-auto'
       role='banner'
       aria-label='Main header'
     >
-      <div className='flex items-center container mx-auto 3 justify-between max-w-7xl'>
+      <div className='flex items-center mx-auto  justify-between max-w-7xl px-3 md:px-6'>
         <Link href='/' className='flex space-x-3.5 items-center group cursor-none'>
           <Image src='/profile.jpeg' alt='Farkhan Muhammad Profile' className='hidden lg:block w-10 h-10 rounded-full object-cover' width={40} height={40} />
           <div>
@@ -56,7 +56,7 @@ const Header: React.FC = () => {
             </Link>
           ))}
           <Link href='/#contact' className={cn(buttonVariants(), "rounded-full cursor-none")} aria-label='Send an email to Farkhan Muhammad'>
-            Get in Touch
+            Contact
           </Link>
         </nav>
 
@@ -108,7 +108,7 @@ const Header: React.FC = () => {
                     onClick={() => setIsMenuOpen(false)}
                     aria-label='Send an email to Farkhan Muhammad'
                   >
-                    Get in Touch
+                    Contact
                   </Link>
                 </div>
               </div>
