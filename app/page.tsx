@@ -4,7 +4,6 @@ import SelectedProjects from "@/components/fragments/SelectedProjects";
 import AboutSection from "@/components/fragments/AboutSection";
 
 export const metadata: Metadata = {
-  title: "Home",
   description: `I'm a Next.js Developer currently studying at Universitas Mikroskil in Medan, Indonesia. My primary expertise lies in Next.js, and I'm enthusiastic about crafting streamlined and
             user-friendly web interfaces. Embracing a commitment to continuous learning, I strive to stay at the forefront of industry trends, ensuring that I bring innovative solutions to the
             ever-evolving landscape of web development. Whether it&apos;s optimizing performance, collaborating on creative projects, or integrating the latest React features, I approach each task
