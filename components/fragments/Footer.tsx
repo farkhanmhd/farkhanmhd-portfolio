@@ -52,13 +52,14 @@ export default function Footer() {
   });
 
   return (
-    <footer id='contact' ref={footerRef} className='py-8 bg-background mix-blend-difference'>
+    <footer id='contact' ref={footerRef} className='py-8 bg-background mix-blend-difference' role='contentinfo' aria-label='Contact section and footer'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 space-y-20 md:space-y-32'>
-        {/* Call to action section */}
-        <div className='text-center space-y-12 md:space-y-16'>
-          <p className='text-sm md:text-base tracking-wide uppercase'>HAVE A PROJECT IN MIND?</p>
+        <section className='text-center space-y-12 md:space-y-16' aria-labelledby='contact-heading'>
+          <p className='text-sm md:text-base tracking-wide uppercase' aria-hidden='true'>
+            HAVE A PROJECT IN MIND?
+          </p>
 
-          <h2 className='text-4xl md:text-6xl lg:text-7xl font-light tracking-tight leading-tight'>
+          <h2 id='contact-heading' className='text-4xl md:text-6xl lg:text-7xl font-light tracking-tight leading-tight'>
             LET&apos;S CREATE
             <br />
             GREAT THINGS <span className='font-serif italic'>together.</span>
@@ -68,35 +69,53 @@ export default function Footer() {
             <Link
               href='mailto:farkhanmuhammad@outlook.com'
               className='inline-block border border-white/50 rounded-full px-8 py-3 text-sm tracking-wide uppercase hover:bg-white hover:text-black transition-colors duration-300 cursor-none'
+              aria-label='Send email to Farkhan Muhammad'
             >
               Get in Touch
             </Link>
           </div>
-        </div>
+        </section>
 
-        {/* Bottom bar */}
         <div className='flex flex-col md:flex-row justify-between items-center text-xs md:text-sm text-white/70 pt-8 border-t border-white/10'>
-          <div>© {currentYear} Farkhan Muhammad</div>
+          <p className='text-sm'>
+            <small>© {currentYear} Farkhan Muhammad. All rights reserved.</small>
+          </p>
 
-          <div className='flex items-center gap-6 my-6 md:my-0'>
+          <div className='flex items-center gap-6 my-6 md:my-0' aria-label='Current location and time'>
             <span>INDONESIA</span>
-            <span>{currentTime}</span>
+            <time dateTime={new Date().toISOString()}>{currentTime}</time>
           </div>
 
-          <div className='flex items-center gap-8'>
-            <Link href='https://linkedin.com/in/farkhanmhd' target='_blank' rel='noopener noreferrer' className='hover:text-white transition-colors cursor-none'>
-              LINKEDIN
-            </Link>
-            <Link href='https://github.com/farkhanmhd' target='_blank' rel='noopener noreferrer' className='hover:text-white transition-colors cursor-none'>
-              GITHUB
-            </Link>
-            <Link href='https://instagram.com/farkhanmhd' target='_blank' rel='noopener noreferrer' className='hover:text-white transition-colors cursor-none'>
-              INSTAGRAM
-            </Link>
-            <button onClick={scrollToTop} className='ml-2 p-1 hover:text-white transition-colors cursor-none' aria-label='Scroll to top'>
-              <ArrowUp size={16} />
-            </button>
-          </div>
+          <nav className='flex items-center gap-8' aria-label='Social media links'>
+            <ul className='flex items-center gap-8 list-none'>
+              <li>
+                <Link
+                  href='https://linkedin.com/in/farkhanmhd'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='hover:text-white transition-colors cursor-none'
+                  aria-label='Visit LinkedIn profile'
+                >
+                  LINKEDIN
+                </Link>
+              </li>
+              <li>
+                <Link href='https://github.com/farkhanmhd' target='_blank' rel='noopener noreferrer' className='hover:text-white transition-colors cursor-none' aria-label='Visit GitHub profile'>
+                  GITHUB
+                </Link>
+              </li>
+              <li>
+                <Link href='https://instagram.com/farkhanmhd' target='_blank' rel='noopener noreferrer' className='hover:text-white transition-colors cursor-none' aria-label='Visit Instagram profile'>
+                  INSTAGRAM
+                </Link>
+              </li>
+              <li>
+                <button onClick={scrollToTop} className='ml-2 p-1 hover:text-white transition-colors cursor-none' aria-label='Scroll to top of page'>
+                  <ArrowUp size={16} />
+                </button>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </footer>

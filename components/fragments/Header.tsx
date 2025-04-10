@@ -56,7 +56,7 @@ const Header: React.FC = () => {
             </Link>
           ))}
           <Link href='/#contact' className={cn(buttonVariants(), "rounded-full cursor-none")} aria-label='Send an email to Farkhan Muhammad'>
-            Get in Touch
+            Contact
           </Link>
         </nav>
 
@@ -108,7 +108,7 @@ const Header: React.FC = () => {
                     onClick={() => setIsMenuOpen(false)}
                     aria-label='Send an email to Farkhan Muhammad'
                   >
-                    Get in Touch
+                    Contact
                   </Link>
                 </div>
               </div>
