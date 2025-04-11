@@ -42,7 +42,7 @@ export default function AboutSection() {
       <h2 className='text-4xl md:text-5xl font-medium' id='about-heading'>
         About Me
       </h2>
-      <div className='space-y-8 md:space-y-0 flex flex-col-reverse md:grid md:grid-cols-[3fr_2fr] md:gap-12 lg:gap-16 items-center' role='presentation'>
+      <div className='space-y-8 md:space-y-0 flex flex-col-reverse md:grid md:grid-cols-[3fr_2fr] gap-6 md:gap-12 lg:gap-16 items-center' role='presentation'>
         <div className='space-y-8'>
           <p className='text-xl md:text-2xl leading-relaxed font-light text-muted-foreground' aria-labelledby='about-heading'>
             I&apos;m a Next.js Developer currently studying at Universitas Mikroskil in Medan, Indonesia. My primary expertise lies in Next.js, and I&apos;m enthusiastic about crafting streamlined and
