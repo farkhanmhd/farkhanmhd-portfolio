@@ -30,6 +30,7 @@ const Header: React.FC = () => {
   const navItems = [
     { href: "/#projects", label: "Projects", ariaLabel: "View my projects" },
     { href: "/#about", label: "About", ariaLabel: "View about me" },
+    { href: "https://drive.google.com/file/d/1mwrrG6EQhx9ZgM5hno77K54efTELFyhf/view?usp=sharing", label: "Resume", ariaLabel: "View Resume", target: "_blank", rel: "noopener noreferrer" },
   ];
 
   return (
@@ -84,6 +85,7 @@ const Header: React.FC = () => {
                 <nav className='flex flex-col space-y-0 flex-1'>
                   {navItems.map((item, index) => (
                     <Link
+                      {...item}
                       key={item.href}
                       href={item.href}
                       className='group py-6 border-b border-white/10 flex items-center justify-between cursor-none'
