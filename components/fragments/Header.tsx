@@ -52,7 +52,7 @@ const Header: React.FC = () => {
         {/* Desktop Navigation */}
         <nav className='hidden md:flex gap-x-6 items-center'>
           {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className='text-muted-foreground text-sm hover:text-white duration-200 cursor-none' aria-label={item.ariaLabel}>
+            <Link {...item} key={item.href} href={item.href} className='text-muted-foreground text-sm hover:text-white duration-200 cursor-none' aria-label={item.ariaLabel}>
               {item.label}
             </Link>
           ))}
