@@ -30,12 +30,12 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </li>
     ),
     code: ({ children, ...props }) => (
-      <code className='bg-muted text-gray-100 p-1.5 rounded text-sm' {...props}>
+      <code className='bg-muted text-black font-semibold p-2 rounded text-sm' {...props}>
         {children}
       </code>
     ),
     pre: ({ children, ...props }) => (
-      <pre className='bg-gray-900 text-gray-100 p-4 rounded overflow-auto my-4' {...props}>
+      <pre className='bg-gray-900 text-black font-semibold p-4 rounded overflow-auto my-4' {...props}>
         {children}
       </pre>
     ),

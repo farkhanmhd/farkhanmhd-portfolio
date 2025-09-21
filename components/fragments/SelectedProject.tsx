@@ -29,9 +29,9 @@ const SelectedProject: React.FC<SelectedProjectProps> = ({ id, image, label, cap
   });
 
   return (
-    <Link href={`/projects/${id}`} className='cursor-none group block' aria-labelledby={titleId} aria-describedby={descriptionId} role='article' scroll>
+    <Link href={`/projects/${id}`} className='cursor-none group block py-6' aria-labelledby={titleId} aria-describedby={descriptionId} role='article' scroll>
       <figure ref={cardRef} className='space-y-6'>
-        <Image src={image} alt={`Preview of ${label}`} className='w-full h-full object-cover rounded-3xl aspect-[4/3] md:aspect-video' width={1000} height={1000} loading='lazy' />
+        <Image src={image} alt={`Preview of ${label}`} className='w-full h-full object-cover aspect-[4/3] md:aspect-video' width={1000} height={1000} loading='lazy' />
         <figcaption className='flex justify-between items-center'>
           <div className='space-y-2'>
             <h3 id={titleId} className='text-3xl font-semibold'>
@@ -41,7 +41,7 @@ const SelectedProject: React.FC<SelectedProjectProps> = ({ id, image, label, cap
               {caption}
             </p>
           </div>
-          <div className='border border-white p-2 rounded-full group-hover:text-black group-hover:bg-white transition-colors duration-300 ease-in-out' aria-hidden='true'>
+          <div className='ring p-2 group-hover:text-white group-hover:bg-black transition-colors duration-300 ease-in-out' aria-hidden='true'>
             <ArrowRight />
           </div>
         </figcaption>

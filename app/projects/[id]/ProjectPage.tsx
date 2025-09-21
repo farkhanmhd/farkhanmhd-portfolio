@@ -22,26 +22,22 @@ const ProjectPage = ({ project, content }: Props) => {
   const otherProjects = projects.filter((p) => p.id !== project.id);
 
   return (
-    <section className='pt-[84px]' aria-label='Project Details'>
+    <section className='pt-[77px]' aria-label='Project Details'>
       <div className='flex flex-col lg:flex-row max-w-7xl mx-auto px-6'>
-        <aside className='lg:h-[calc(100dvh-84px)] space-y-4 py-4 lg:pr-12 lg:top-[84px] lg:w-5/12 lg:sticky lg:border-r'>
-          <Button type='button' variant='ghost' onClick={back} className='rounded-full items-center cursor-none'>
-            <ChevronLeft />
-            <span>Back</span>
-          </Button>
-          <div className='space-y-8'>
+        <aside className='lg:h-[calc(100dvh-77px)] space-y-4 lg:pr-12 lg:top-[77px] lg:w-5/12 lg:sticky lg:border-r'>
+          <div className='space-y-8 mt-6'>
             <h2 className='text-4xl lg:text-5xl font-bold'>{project!.label}</h2>
             <p className='text-muted-foreground'>{project!.description}</p>
           </div>
           {(project?.github || project?.website) && (
             <div className='grid gap-4 items-center w-full' style={{ gridTemplateColumns: "repeat(auto-fit, minmax(0, 1fr))" }}>
               {project?.github && (
-                <Link href={project.github} className={cn(buttonVariants(), "cursor-none")} style={{ borderRadius: "6px" }}>
+                <Link href={project.github} className={cn(buttonVariants({ variant: "outline" }), "hover:bg-black hover:text-white cursor-none rounded-none")}>
                   GitHub
                 </Link>
               )}
               {project?.website && (
-                <Link href={project.website} className={cn(buttonVariants({ variant: "outline" }), "cursor-none")} style={{ borderRadius: "6px" }}>
+                <Link href={project.website} className={cn(buttonVariants({ variant: "outline" }), "hover:bg-black hover:text-white cursor-none rounded-none")}>
                   Live Website
                 </Link>
               )}
@@ -62,13 +58,17 @@ const ProjectPage = ({ project, content }: Props) => {
               </div>
             ))}
           </div>
+          {/* <Button type='button' variant='outline' onClick={back} className='items-center cursor-none mt-auto'>
+            <ChevronLeft />
+            <span>Back</span>
+          </Button> */}
         </aside>
         <article className='lg:w-7/12 py-6 lg:py-4 lg:pl-12 space-y-6'>
-          <Image src={project.image} alt='Project Image' width={800} height={600} className='w-full' style={{ borderRadius: "8px" }} />
+          <Image src={project.image} alt='Project Image' width={800} height={600} className='w-full' />
           <div>{content}</div>
         </article>
       </div>
-      <div className='bg-secondary/50 py-6 lg:py-12'>
+      <div className=' py-6 lg:py-12 border-y'>
         <div className='max-w-7xl px-3 md:px-6 mx-auto space-y-6'>
           <h2 className='text-3xl lg:text-4xl font-medium'>Other Projects</h2>
           <div className='flex flex-col md:flex-row gap-6 items-center'>

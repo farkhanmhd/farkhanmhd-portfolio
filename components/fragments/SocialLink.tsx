@@ -17,7 +17,7 @@ const SocialLink: React.FC<SocialLinkProp> = ({ href, text }) => {
       href={href}
       target={isExternal ? "_blank" : undefined}
       rel={isExternal ? "noopener noreferrer" : undefined}
-      className={cn(buttonVariants({ variant: "outline", size: "sm" }), "rounded-full cursor-none")}
+      className={cn(buttonVariants({ variant: "outline", size: "sm" }), "cursor-none hover:bg-black hover:text-white")}
       aria-label={ariaLabel}
     >
       {text}

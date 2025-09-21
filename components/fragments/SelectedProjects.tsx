@@ -26,12 +26,14 @@ const SelectedWorks: React.FC = () => {
   });
 
   return (
-    <section id='projects' className='py-8 md:py-24 space-y-12' aria-label='Selected Projects'>
-      <h2 id='selected-projects' ref={titleRef} className='text-4xl md:text-5xl font-medium'>
-        Selected Projects
-      </h2>
-      <div className='space-y-12'>
-        <MapItems of={projects} render={(work, index) => <SelectedProject key={index} {...work} />} />
+    <section id='projects' className='py-8 md:py-24' aria-label='Selected Projects'>
+      <div className='max-w-7xl mx-auto px-3 md:px-6 space-y-12'>
+        <h2 id='selected-projects' ref={titleRef} className='text-4xl md:text-5xl font-medium'>
+          Selected Projects
+        </h2>
+        <div className='space-y-12'>
+          <MapItems of={projects} render={(work, index) => <SelectedProject key={index} {...work} />} />
+        </div>
       </div>
     </section>
   );

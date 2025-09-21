@@ -16,7 +16,7 @@ export const metadata: Metadata = {
             ever-evolving landscape of web development. Whether it&apos;s optimizing performance, collaborating on creative projects, or integrating the latest React features, I approach each task
             with passion and a dedication to delivering high-quality results.`,
     url: "https://farkhanmhd.vercel.app",
-    siteName: "Farkhan Muhammad - Next.js Developer",
+    siteName: "Farkhan Muhammad - Web Developer",
     locale: "en_US",
     type: "website",
   },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className='max-w-7xl mx-auto px-3 md:px-6'>
+    <div className='divide-y'>
       <HeroSection />
       <SelectedProjects />
       <AboutSection />

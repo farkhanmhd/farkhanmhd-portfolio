@@ -5,8 +5,8 @@ import { Geist } from "next/font/google";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Farkhan - Next.js Developer",
-    default: "Farkhan - Next.js Developer",
+    template: "%s | Farkhan - Web Developer",
+    default: "Farkhan - Web Developer",
   },
   icons: {
     icon: "/profile.jpeg",
